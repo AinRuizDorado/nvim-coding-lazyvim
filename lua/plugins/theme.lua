@@ -9,15 +9,14 @@ return {
   { "yorumicolors/yorumi.nvim" },
   {
     "wnkz/monoglow.nvim",
-    lazy = false,
-    priority = 1000,
-    opts = {},
   },
-  -- Configure LazyVim to load gruvbox
+  { "bluz71/vim-moonfly-colors", 
+		name = "moonfly"
+	},
   {
     "LazyVim/LazyVim",
     opts = {
-			colorscheme = "yorumi",
+      colorscheme = "moonfly",
       -- colorscheme = "base16-windows-95",
       -- colorscheme = "kanagawa",
       -- colorscheme = "dosbox",
