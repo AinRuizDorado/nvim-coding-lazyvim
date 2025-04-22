@@ -1,34 +1,12 @@
 return {
 
-  require("telescope").setup({
-    defaults = {
-      vimgrep_arguments = {
-        "rg",
-        "--color=never",
-        "--no-heading",
-        "--with-filename",
-        "--line-number",
-        "--column",
-        "--hidden",
-        "--smart-case",
-      },
-      file_ignore_patterns = {
-        -- ignore dotnet generated folders in the file search
-        "^bin/",
-        "^obj/",
-        "/bin/",
-        "/obj/",
-        "/platforms/",
-        "^platforms/",
-        "/lib/",
-        "^lib/",
-        "/node_modules/",
-        "^node_modules/",
-        "/www/",
-        "^www/",
-				"/plugins",
-				"^plugins",
-      },
+  require("fzf-lua").setup({
+    fzf_opts = {
+      ['--color'] = '16',
+      ['--layout'] = 'reverse',
+    },
+    files = {
+      rg_opts = "--color=never --files --hidden --follow -g '!.git' -g '!node_modules' -g '!bin' -g '!obj' -g '!platforms' -g '!lib' -g '!www' -g '!plugins'",
     },
   }),
 }

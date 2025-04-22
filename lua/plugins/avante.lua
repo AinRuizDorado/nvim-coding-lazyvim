@@ -3,6 +3,15 @@ return {
   event = "VeryLazy",
   lazy = false,
   version = false, -- Set this to "*" to always pull the latest release version, or set it to false to update to the latest code changes.
+  build = (function()
+    if vim.loop.os_uname().sysname == "Linux" then
+      return "make"
+    elseif vim.loop.os_uname().sysname == "Windows_NT" then
+      return "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false"
+    else
+      return nil
+    end
+  end)(),
   opts = {
     ---@alias Provider "claude" | "openai" | "azure" | "gemini" | "cohere" | "copilot" | string
     provider = "copilot", -- Recommend using Claude
@@ -114,8 +123,8 @@ return {
     }, -- add any opts here
   },
   -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
-  -- build = "make",
-  build = "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false", -- for windows
+	
+
   dependencies = {
     "stevearc/dressing.nvim",
     "nvim-lua/plenary.nvim",
