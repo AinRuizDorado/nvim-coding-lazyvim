@@ -40,18 +40,14 @@ if vim.g.neovide then
   vim.g.neovide_refresh_rate = 30
 end
 
-
 -- Indentation
 
-opt.smartindent = true 
+opt.smartindent = true
 opt.wrap = true
 
-
 ---- Important Grammar and spell check
--- opt.spelllang = 'es'
--- opt.spell = true
-
-
+opt.spelllang = "es"
+opt.spell = true
 
 -- Search
 
@@ -64,7 +60,7 @@ opt.completeopt = "menuone,noselect"
 -- Behaviour
 
 opt.errorbells = false
---opt.backspace = "indent, eol, start" 
+--opt.backspace = "indent, eol, start"
 opt.modifiable = true
---opt.guicursor = true 
+--opt.guicursor = true
 opt.encoding = "UTF-8"
