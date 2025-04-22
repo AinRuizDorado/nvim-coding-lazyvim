@@ -45,10 +45,6 @@ end
 opt.smartindent = true
 opt.wrap = true
 
----- Important Grammar and spell check
-opt.spelllang = "es"
-opt.spell = true
-
 -- Search
 
 opt.incsearch = true
