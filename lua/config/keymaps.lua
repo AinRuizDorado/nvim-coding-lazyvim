@@ -1,8 +1,4 @@
 -- Keymaps are automatically loaded on the VeryLazy event
--- Diffview keymaps
-map("n", "<leader>do", "<cmd>DiffviewOpen<cr>", { desc = "Open Diffview" })
-map("n", "<leader>dc", "<cmd>DiffviewClose<cr>", { desc = "Close Diffview" })
-map("n", "<leader>dh", "<cmd>DiffviewFileHistory<cr>", { desc = "File History" })
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
@@ -58,3 +54,10 @@ vim.api.nvim_set_keymap("n", "<leader>sp", "<Plug>(SpotifyPause)", { silent = tr
 vim.api.nvim_set_keymap("n", "<leader>so", ":Spotify<CR>", { silent = true }) -- Open Spotify Search window
 vim.api.nvim_set_keymap("n", "<leader>sd", ":SpotifyDevices<CR>", { silent = true }) -- Open Spotify Devices window
 vim.api.nvim_set_keymap("n", "<leader>sa", "<Plug>(SpotifyPrev)", { silent = true }) -- Go back to the previous track
+
+
+
+-- Diffview keymaps
+map("n", "<leader>do", "<cmd>DiffviewOpen<cr>", { desc = "Open Diffview" })
+map("n", "<leader>dc", "<cmd>DiffviewClose<cr>", { desc = "Close Diffview" })
+map("n", "<leader>dh", "<cmd>DiffviewFileHistory<cr>", { desc = "File History" })
