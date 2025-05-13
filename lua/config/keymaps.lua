@@ -1,4 +1,8 @@
 -- Keymaps are automatically loaded on the VeryLazy event
+-- Diffview keymaps
+map("n", "<leader>do", "<cmd>DiffviewOpen<cr>", { desc = "Open Diffview" })
+map("n", "<leader>dc", "<cmd>DiffviewClose<cr>", { desc = "Close Diffview" })
+map("n", "<leader>dh", "<cmd>DiffviewFileHistory<cr>", { desc = "File History" })
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
