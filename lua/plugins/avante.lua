@@ -13,7 +13,15 @@ return {
     -- this file can contain specific instructions for your project
     instructions_file = "avante.md",
     -- for example
-    provider = "copilot",
+    provider = "deepseek",
+    providers = {
+      deepseek = {
+        __inherited_from = "openai",
+        api_key_name = "avante",
+        endpoint = "https://api.deepseek.com",
+        model = "deepseek-coder",
+      },
+		},
     dependencies = {
       "nvim-lua/plenary.nvim",
       "MunifTanjim/nui.nvim",
