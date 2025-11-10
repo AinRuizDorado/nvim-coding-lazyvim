@@ -19,5 +19,35 @@ return {
     { "folke/snacks.nvim", version = ">=2.24.0" },
     --- The below dependencies are optional
   },
-  config = true,
+  config = function()
+    require("nvim_aider").setup({
+      -- Command line arguments passed to aider
+      args = {
+        "--no-auto-commits",
+        "--pretty",
+        "--stream",
+      },
+      -- Automatically reload buffers changed by Aider (requires vim.o.autoread = true)
+      auto_reload = true,
+      -- Idle timeout in ms for Aider's output.
+      idle_timeout = 5000,
+      -- Response timeout in ms for Aider's first output chunk.
+      response_timeout = 30000,
+      -- Timeout in ms for quick commands.
+      quick_idle_timeout = 500,
+      -- A list of slash-commands that should have a shorter idle timeout.
+      quick_commands = {
+        "/add",
+        "/drop",
+        "/read-only",
+        "/ls",
+        "/clear",
+        "/reset",
+        "/undo",
+      },
+      -- Show 'Processing...' and 'Done' notifications.
+      notifications = true,
+      -- Theme colors (automatically uses Catppuccin flavor if available)
+    })
+  end,
 }

@@ -6,6 +6,7 @@ local opt = vim.opt
 opt.termguicolors = true
 opt.cursorline = false -- Enable highlighting of the current line
 opt.expandtab = false -- Use spaces instead of tabs
+vim.o.autoread = true
 
 if vim.loop.os_uname().sysname == "Darwin" then
   vim.notify("MacOS init")
